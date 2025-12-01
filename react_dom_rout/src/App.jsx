@@ -8,12 +8,14 @@ import About from './pages/About'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import PageNotFound from './pages/PageNotFound'
+import Navbar2 from './components/Navbar2'
 
 const App=()=>{
 
   return (
     <>
       <Navbar />
+      <Navbar2 />
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
