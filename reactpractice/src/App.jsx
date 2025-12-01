@@ -4,21 +4,22 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [currentTime , setCurrentTime] = useState(new Date().toLocaleString());
 
-  // useEffect(()=>{
-  //   const interval = setInetrval(()=>{
-  //     setCurrentTime(new Date().toLocaleDateString());
-  //   },1000)
-
-  //   return ()=> clearInterval(interval); // cleanup unmount
-  // },[]);
+  const [title ,setTitle] = useState('')
+   function submitHandler(e){
+    e.preventDefault()
+    console.log(title+" submitted")
+    setTitle('')
+   }
 
   return (
-      <div>
-        <h1>Example of funcitonal component</h1>
-        <h2>{currentTime}</h2>
-      </div>
+    <form onSubmit={submitHandler} >
+      <input type="text" placeholder='Username' value={title} className='design' onChange={(e)=>{
+        setTitle(e.target.value)
+      }}/>
+      <input type="email" placeholder='Email' className='design'/>
+      <button className='design'>Submit</button>
+    </form>
   )
 }
 
