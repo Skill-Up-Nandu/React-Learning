@@ -69,3 +69,7 @@ button:focus-visible {
 .pnf {
   color: red;
 }
+
+.capital {
+   text-transform : capitalize;
+}

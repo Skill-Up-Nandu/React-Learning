@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import Contact from './pages/Contact'
 import PageNotFound from './pages/PageNotFound'
 import Navbar2 from './components/Navbar2'
+import DynamicPage from './pages/DynamicPage'
 
 const App=()=>{
 
@@ -21,6 +22,7 @@ const App=()=>{
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='*' element={<PageNotFound />} />
+        <Route path='/about/:aboutId' element={<DynamicPage />} />
       </Routes>
     </>
   )
